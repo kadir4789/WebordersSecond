@@ -12,6 +12,8 @@ public class LoginPage extends PageBase {
     private By loginButtonLocator = By.id("ctl00_MainContent_login_button");
     private By statusTextLocator = By.xpath("//span[@id='ctl00_MainContent_status']");
 
+
+
     public void goToPage(){
         Driver.getDriver().get(pageUrl);
     }
@@ -43,5 +45,10 @@ public class LoginPage extends PageBase {
     public boolean isLoginButtonDisplayed(){
         //return Driver.getDriver().findElement(loginButtonLocator).isDisplayed();
         return seleniumUtil.isDisplayed(loginButtonLocator);
+    }
+
+    @Override
+    public void waitForPageToLoad() {
+
     }
 }

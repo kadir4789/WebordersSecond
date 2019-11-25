@@ -10,7 +10,11 @@ public class SeleniumUtil {
         return Driver.getDriver().findElement(locator);
     }
     public void sendKeys(By locator, String text){
+        clear(locator);
         findElement(locator).sendKeys(text);
+    }
+    public void clear(By locator){
+        findElement(locator).clear();
     }
     public void click(By locator){
         findElement(locator).click();
