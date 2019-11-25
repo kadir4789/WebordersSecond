@@ -4,6 +4,8 @@ import com.weborders.common.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class SeleniumUtil {
 
     public WebElement findElement(By locator){
@@ -24,6 +26,8 @@ public class SeleniumUtil {
     }
     public boolean isDisplayed(By locator){
         return findElement(locator).isDisplayed();
-
+    }
+    public List<WebElement> findElements(By locator){
+        return Driver.getDriver().findElements(locator);
     }
 }
